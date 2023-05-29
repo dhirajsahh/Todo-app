@@ -1,0 +1,12 @@
+const router = require("express").Router();
+const CreateTodo = require("./CreateTodo");
+const getallTodo = require("./GetallTodo");
+const getparticularTodo = require("./GetPaticularTodo");
+const updateTodo = require("./UpdateTodo");
+const deleteTodo = require("./DeleteTodo");
+router.use("/todo", CreateTodo);
+router.use("/todo", getallTodo);
+router.use("/todo", getparticularTodo);
+router.use("/todo", updateTodo);
+router.use("/todo", deleteTodo);
+module.exports = router;
